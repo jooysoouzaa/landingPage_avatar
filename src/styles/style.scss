@@ -45,13 +45,20 @@ img {
   top: 0;
   width: 100%;
   z-index: 1;
-  background: rgba(0, 52, 68, 0.7);
+  background: rgba(0, 52, 68, 0.4);
 
   &__container {
     display: flex;
     gap: 60px;
     align-items: center;
     flex-wrap: wrap;
+  }
+  &__image{
+   img{
+    @media only screen and (max-width: 575px){
+      width: 25px;
+    }
+   }
   }
   &__nav {
     &__lista {
@@ -193,6 +200,12 @@ img {
     display: flex;
     gap: 20px;
     flex-wrap: nowrap;
+    @media only screen and (min-width:481px) and (max-width: 990px){
+      gap: 10px;
+    }
+    @media only screen and (max-width: 480px){
+      gap: 5px;
+    }
   }
   &__item {
     img {
