@@ -27,3 +27,63 @@
     });
   });
 
+  //Slide images
+
+  const imagesList = document.querySelector('.images__lista');
+  const imagesItems = document.querySelectorAll('.images__item');
+  const imagesCount = imagesItems.length;
+  const initialImageCount = 3;
+  const slideInterval = 3000;
+  let currentIndex = 0;
+  
+  function showImages(startIndex) {
+    const visibleImages = Array.from(imagesItems).slice(startIndex, startIndex + initialImageCount);
+    imagesList.innerHTML = '';
+    visibleImages.forEach(imageItem => imagesList.appendChild(imageItem));
+  
+    // Atualizar os indicadores de slide
+    const sliderIndicators = document.querySelector('.slider__indicators');
+    sliderIndicators.innerHTML = '';
+    for (let i = 0; i < Math.ceil(imagesCount / initialImageCount); i++) {
+      const indicator = document.createElement('div');
+      indicator.classList.add('slider__indicator');
+      if (i === Math.floor(startIndex / initialImageCount)) {
+        indicator.classList.add('active');
+      }
+      indicator.addEventListener('click', () => {
+        currentIndex = i * initialImageCount;
+        showImages(currentIndex);
+        updateSliderIndicators();
+      });
+      sliderIndicators.appendChild(indicator);
+    }
+  }
+  
+  function slideImages() {
+    currentIndex = (currentIndex + initialImageCount) % imagesCount;
+    showImages(currentIndex);
+    updateSliderIndicators();
+  }
+  
+  function updateSliderIndicators() {
+    const sliderIndicators = document.querySelectorAll('.slider__indicator');
+    sliderIndicators.forEach((indicator, index) => {
+      if (index === Math.floor(currentIndex / initialImageCount)) {
+        indicator.classList.add('active');
+      } else {
+        indicator.classList.remove('active');
+      }
+    });
+  }
+  
+  showImages(0);
+  const slideIntervalId = setInterval(slideImages, slideInterval);
+  
+  imagesList.addEventListener('mouseenter', () => {
+    clearInterval(slideIntervalId);
+  });
+  
+  imagesList.addEventListener('mouseleave', () => {
+    slideIntervalId = setInterval(slideImages, slideInterval);
+  });
+  

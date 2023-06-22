@@ -7,29 +7,15 @@
   list-style: none;
 }
 
-$brightColour: #bababa;
-$darkColor: #000d1d;
-$buttonColor: #459fd3;
+$brightColour: #c8eefc;
+$darkColor: #003444;
+$colorTextDark: #001c24;
+$colorLigth: #2f474f;
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
   color: $brightColour;
-  background: no-repeat url(/src/images/background.png);
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-  @media only screen and (max-width: 575px) {
-    background: no-repeat url(/src/images/background_575.png);
-    background-size: cover;
-  }
-  @media only screen and (min-width:576px) and (max-width: 767px) {
-    background: no-repeat url(/src/images/background_767.png);
-    background-size: cover;
-  }
-  @media only screen and (min-width:768px) and (max-width: 991px) {
-    background: no-repeat url(/src/images/background_991.png);
-    background-size: cover;
-  }
+  background: linear-gradient(#001c24, #064a5f);
 }
 
 img {
@@ -53,55 +39,171 @@ img {
   border: none;
 }
 
+.header {
+  padding: 1vw 6vw;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background: rgba(0, 52, 68, 0.7);
+
+  &__container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__nav {
+    &__lista {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      li {
+        color: $brightColour;
+        font-size: 1rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover {
+          color: lighten($brightColour, 10%);
+        }
+      }
+    }
+  }
+}
 
 .hero {
-  padding: 6vw;
+  background: no-repeat url(/src/images/bg.png);
+  background-size: cover;
+  padding: 4vw;
+  position: relative;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  align-items: center;
 
   &__container {
     display: flex;
     flex-direction: column;
+    margin-top: 60px;
   }
   &__image {
     max-width: 100%;
     width: 364px;
     display: block;
-    margin-bottom: 20px;
     @media only screen and (max-width: 575px) {
       width: 200px;
     }
   }
+  &__lista {
+    margin: 20px 0px;
+  }
+  &__item {
+    font-size: 1rem;
+    font-weight: 500;
+    color: $colorTextDark;
+    display: flex;
+    gap: 40px;
+  }
   &__texto {
-    max-width: 464px;
-    margin-bottom: 20px;
-    &__resume {
-      font-size: 1.2rem;
-      color: $darkColor;
-      font-weight: 500;
-    }
+    max-width: 486px;
   }
-  &__button {
-    margin-top: 20px;
-    &__link {
-      font-size: 1.2rem;
-      line-height: 1.4;
-      letter-spacing: 1px;
-      padding: 20px 90px;
-      font-weight: bold;
-      border-radius: 10px;
-      border: none;
-      background-color: $darkColor;
-      color: $buttonColor;
-      text-transform: uppercase;
-      cursor: pointer;
-      @media only screen and (max-width: 575px) {
-        padding: 10px 40px;
-        border-radius: 6px;
-      }
+  &__resume {
+    font-size: 1rem;
+    color: $colorTextDark;
+    font-weight: 500;
+  }
 
-      &:hover {
-        background-color: darken($darkColor, 20%);
-        color: $buttonColor;
-      }
+  &__button {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  &__link {
+    font-size: 1rem;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    @media only screen and (max-width: 575px) {
+      padding: 10px 40px;
+      border-radius: 6px;
     }
   }
+}
+.assinar {
+  background-color: $darkColor;
+  color: $brightColour;
+  padding: 15px 40px;
+  &:hover {
+    background-color: darken($darkColor, 5%);
+  }
+}
+.trailer {
+  background-color: #2f474f;
+  color: $brightColour;
+  padding: 15px 20px;
+  &:hover {
+    background-color: darken(#2f474f, 5%);
+  }
+}
+.sinopse {
+  padding: 4vw;
+  &__container {
+    display: flex;
+    gap: 40px;
+  }
+  &__img {
+    img {
+      border-radius: 10px;
+    }
+  }
+  &__text {
+    width: 750px;
+    p {
+      margin-top: 30px;
+    }
+  }
+}
+.images {
+  padding: 0vw 4vw;
+  &__lista {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+  }
+  &__item {
+    img {
+      border-radius: 6px;
+    }
+  }
+}
+
+.footer {
+  padding: 3vw;
+  display: flex;
+  justify-content: center;
+  &__container {
+    max-width: 100%;
+  }
+}
+
+.slider__indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.slider__indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: $brightColour;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.slider__indicator.active {
+  background-color: $colorTextDark;
 }
