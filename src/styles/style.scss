@@ -85,13 +85,16 @@ img {
     display: flex;
     flex-direction: column;
     margin-top: 60px;
+    @media only screen and (max-width: 575px) {
+      margin: 20px 0;
+    }
   }
   &__image {
     max-width: 100%;
     width: 364px;
     display: block;
     @media only screen and (max-width: 575px) {
-      width: 200px;
+      width: 250px;
     }
   }
   &__lista {
@@ -127,8 +130,7 @@ img {
     text-transform: uppercase;
     cursor: pointer;
     @media only screen and (max-width: 575px) {
-      padding: 10px 40px;
-      border-radius: 6px;
+      font-size: 0.875rem;
     }
   }
 }
@@ -136,6 +138,9 @@ img {
   background-color: $darkColor;
   color: $brightColour;
   padding: 15px 40px;
+  @media only screen and (max-width:575px){
+    padding: 15px;
+  }
   &:hover {
     background-color: darken($darkColor, 5%);
   }
@@ -144,6 +149,9 @@ img {
   background-color: #2f474f;
   color: $brightColour;
   padding: 15px 20px;
+  @media only screen and (max-width:575px){
+    padding: 15px;
+  }
   &:hover {
     background-color: darken(#2f474f, 5%);
   }
@@ -152,17 +160,30 @@ img {
   padding: 4vw;
   &__container {
     display: flex;
-    gap: 40px;
+    gap: 20px;
+    @media only screen and (max-width: 767px){
+      display: block;
+    }
   }
   &__img {
+    flex: 0 0 320px;
     img {
       border-radius: 10px;
+      width: 320px;
+      @media only screen and (max-width: 767px){
+        width: 100%;
+        margin-bottom: 20px;
+      }
     }
   }
   &__text {
-    width: 750px;
     p {
-      margin-top: 30px;
+      margin-top: 15px;
+    }
+    h2{
+      @media only screen and (max-width: 860px) {
+        font-size: 20px;
+      }
     }
   }
 }
@@ -186,6 +207,12 @@ img {
   justify-content: center;
   &__container {
     max-width: 100%;
+  }
+  img{
+    @media only screen and (max-width: 575px){
+      width: 100px;
+      margin: 20px 0
+    }
   }
 }
 
