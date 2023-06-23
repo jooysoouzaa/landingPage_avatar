@@ -47,8 +47,7 @@
   }
   &__item {
     font-size: 1rem;
-    font-weight: 500;
-    color: variaveis.$colorDark;
+    color: variaveis.$colorLigth;
     display: flex;
     gap: 40px;
   }
@@ -60,8 +59,7 @@
   }
   &__resume {
     font-size: 1rem;
-    color: variaveis.$colorDark;
-    font-weight: 500;
+    color: variaveis.$colorLigth;
   }
 
   &__button {
