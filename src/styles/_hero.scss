@@ -1,0 +1,113 @@
+@use 'variaveis';
+
+.hero {
+  background: no-repeat url(/src/images/bg.png);
+  background-size: cover;
+  padding: 4vw;
+  position: relative;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width: 575px) {
+    background: no-repeat url(/src/images/bg_mobile.png);
+    height: 100%;
+    background-size: cover;
+    display: block;
+  }
+  @media only screen and (min-width: 576px) and (max-width: 799px) {
+    background: no-repeat url(/src/images/bg_tablet.png);
+    height: 100%;
+    background-size: cover;
+    display: block;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+  }
+  &__image {
+    max-width: 100%;
+    width: 364px;
+    display: block;
+    @media only screen and (max-width: 575px) {
+      display: none;
+    }
+  }
+  &__mobile {
+    display: none;
+    @media only screen and (max-width: 575px) {
+      display: flex;
+      justify-content: center;
+      order: 1;
+    }
+  }
+  &__lista {
+    margin: 20px 0px;
+  }
+  &__item {
+    font-size: 1rem;
+    font-weight: 500;
+    color: variaveis.$colorDark;
+    display: flex;
+    gap: 40px;
+  }
+  &__texto {
+    max-width: 486px;
+    @media only screen and (min-width: 576px) and (max-width: 799px) {
+      max-width: 375px;
+    }
+  }
+  &__resume {
+    font-size: 1rem;
+    color: variaveis.$colorDark;
+    font-weight: 500;
+  }
+
+  &__button {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    @media only screen and (max-width: 575px) {
+      display: flex;
+      flex-direction: column;
+      order: 2;
+    }
+  }
+  &__link {
+    font-size: 1rem;
+    line-height: 1.4;
+    letter-spacing: 1.2px;
+    border-radius: 10px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    @media only screen and (max-width: 575px) {
+      font-size: 0.875rem;
+    }
+  }
+}
+.assinar {
+  background-color: variaveis.$colorLigth;
+  color: variaveis.$colorDark;
+  padding: 15px 40px;
+  font-weight: 600;
+  @media only screen and (max-width: 575px) {
+    text-align: center;
+  }
+  &:hover {
+    background-color: darken(variaveis.$colorLigth, 5%);
+  }
+}
+.trailer {
+  background-color: variaveis.$colorDark;
+  color: variaveis.$colorLigth;
+  padding: 15px 20px;
+  @media only screen and (max-width: 575px) {
+    text-align: center;
+  }
+  &:hover {
+    background-color: darken(variaveis.$colorDark, 5%);
+  }
+}

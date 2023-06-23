@@ -1,0 +1,19 @@
+.images {
+  padding: 0vw 4vw;
+  &__lista {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    @media only screen and (min-width: 481px) and (max-width: 990px) {
+      gap: 10px;
+    }
+    @media only screen and (max-width: 480px) {
+      gap: 5px;
+    }
+  }
+  &__item {
+    img {
+      border-radius: 6px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+
+
+.sinopse {
+  padding: 4vw;
+  &__container {
+    display: flex;
+    gap: 20px;
+    @media only screen and (max-width: 767px) {
+      display: block;
+    }
+  }
+  &__img {
+    flex: 0 0 320px;
+    img {
+      border-radius: 10px;
+      width: 320px;
+      @media only screen and (max-width: 767px) {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__text {
+    p {
+      margin-top: 15px;
+    }
+    h2 {
+      @media only screen and (max-width: 860px) {
+        font-size: 20px;
+      }
+    }
+  }
+}
