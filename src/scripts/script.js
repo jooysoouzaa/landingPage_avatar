@@ -27,6 +27,8 @@
     });
   });
 
+  
+
   //Slide images
 
   const imagesList = document.querySelector('.images__lista');
