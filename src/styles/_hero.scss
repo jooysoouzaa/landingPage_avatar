@@ -26,6 +26,10 @@
     display: flex;
     flex-direction: column;
     margin-top: 60px;
+    @media only screen and (max-width: 575px) {
+      margin-top: -33px;
+    }
+
   }
   &__image {
     max-width: 100%;
