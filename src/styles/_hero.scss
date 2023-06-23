@@ -40,7 +40,6 @@
     @media only screen and (max-width: 575px) {
       display: flex;
       justify-content: center;
-      order: 1;
     }
   }
   &__lista {
@@ -72,7 +71,6 @@
     @media only screen and (max-width: 575px) {
       display: flex;
       flex-direction: column;
-      // order: 2;
     }
   }
   &__link {
