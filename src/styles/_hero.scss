@@ -1,7 +1,7 @@
 @use 'variaveis';
 
 .hero {
-  background: linear-gradient(to left, transparent 0%, #001c24 100%),no-repeat url(/src/images/bg.png);
+  background: linear-gradient(to left, transparent 45%, #001c24 91%),no-repeat url(/src/images/bg.png);
   background-size: cover;
   padding: 4vw;
   position: relative;
@@ -16,7 +16,7 @@
     display: block;
   }
   @media only screen and (min-width: 576px) and (max-width: 799px) {
-    background: linear-gradient(to left, transparent 0%, #001c24 100%),no-repeat url(/src/images/bg_tablet.png);
+    background: linear-gradient(to left, transparent 36%, #001c24 91%),no-repeat url(/src/images/bg_tablet.png);
     height: 100%;
     background-size: cover;
     display: block;
@@ -27,7 +27,7 @@
     flex-direction: column;
     margin-top: 60px;
     @media only screen and (max-width: 575px) {
-      margin-top: 25px;
+      margin-top: -20px;
     }
 
   }
