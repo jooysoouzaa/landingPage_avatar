@@ -16,7 +16,7 @@ trailerButton.addEventListener("click", function () {
   modal.appendChild(iframe);
 
   // Adicione o modal ao corpo do documento
-  document.body.append9Child(modal);
+  document.body.appendChild(modal);
 
   // Adicione um ouvinte de eventos de clique no modal para fechá-lo quando clicado fora do vídeo
   modal.addEventListener("click", function (event) {
@@ -32,7 +32,7 @@ const imagesList = document.querySelector(".images__lista");
 const imagesItems = document.querySelectorAll(".images__item");
 const imagesCount = imagesItems.length;
 const initialImageCount = 3;
-const slideInterval = 9000;
+const slideInterval = 8000;
 let currentIndex = 0;
 
 function showImages(startIndex) {
