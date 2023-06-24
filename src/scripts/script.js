@@ -32,7 +32,7 @@ const imagesList = document.querySelector(".images__lista");
 const imagesItems = document.querySelectorAll(".images__item");
 const imagesCount = imagesItems.length;
 const initialImageCount = 3;
-const slideInterval = 3000;
+const slideInterval = 6000;
 let currentIndex = 0;
 
 function showImages(startIndex) {
