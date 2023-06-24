@@ -8,4 +8,5 @@ Combinando um design cuidadoso e moderno com elementos interativos, o projeto "A
 Acesse o projeto: [https://landing-page-avatar-2fyo.vercel.app/](https://avatar-rose.vercel.app/)
 
 ![Captura de tela 2023-06-24 110211](https://github.com/jooysoouzaa/landingPage_avatar/assets/126807536/6fdc7ca9-7c83-4f3f-89a4-d535dea8182d)
-# avatar_landingPage
+
+
