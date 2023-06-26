@@ -79,7 +79,7 @@ function updateSliderIndicators() {
 }
 
 showImages(0);
-const slideIntervalId = setInterval(slideImages, slideInterval);
+let slideIntervalId = setInterval(slideImages, slideInterval);
 
 imagesList.addEventListener("mouseenter", () => {
   clearInterval(slideIntervalId);
